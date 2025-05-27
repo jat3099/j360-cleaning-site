@@ -1,0 +1,103 @@
+/* navbar.css */
+header, .navbar {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px; /* Add some horizontal spacing */
+  }
+  
+
+  .navdiv ul {
+    display: flex;
+    gap: 30px; /* ← Unified spacing for ALL pages */
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+.navdiv ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 3.5rem;
+    font-weight: 500;
+    position: relative;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navdiv ul li a:hover {
+    color: #007BFF;
+}
+
+.navdiv ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007BFF;
+    transition: width 0.3s ease;
+}
+
+.navdiv ul li a:hover::after {
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: -40px;
+}
+
+.logo-img-wrapper {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.logo-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    object-position: 50% 60%;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-family: 'Yeseva One', serif;
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Shrink on scroll */
+header.shrink,
+.navbar.shrink {
+    padding: 4px 0;
+}
+
+.logo-img-wrapper.shrink {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.logo-img.shrink {
+    width: 70px !important;
+    height: 70px !important;
+    object-position: 50% 55% !important;
+}

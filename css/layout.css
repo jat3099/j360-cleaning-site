@@ -1,0 +1,89 @@
+/* layout.css */
+.services-list,
+.service-grid,
+.navbar-inner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 80px; /* 🔵 Horizontal spacing between cards */
+  row-gap: 150px;   /* 🔵 Vertical spacing between rows */
+  margin-bottom: 60px; /* Optional: Space below the entire section */
+}
+
+#services {
+  margin-bottom: 80px; /* or adjust as needed */
+}
+
+
+.services-list {
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 80px; /* space between cards */
+    justify-content: center;
+    max-width: 1200px; /* center and contain the grid */
+    margin: 0 auto; /* horizontal centering */
+    padding: 40px 60px;
+  }
+  
+
+.service-page {
+    padding: 120px 40px 60px;
+    background: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#about {
+  background-color: #f7f7f7;
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 2px solid #203a43;
+}
+
+#about .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  color: #203a43;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 20px;
+}
+
+#about p {
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 1.125rem; /* bigger text */
+  line-height: 1.8;    /* more breathing room */
+  color: #444;         /* softer dark for readability */
+  font-family: 'Poppins', sans-serif;
+}
+
+
+#about .container {
+  text-align: center;
+}
+
+.about-icon {
+  font-size: 60px;
+  margin: 40px auto 20px auto;
+  display: block;
+  color: #203a43;
+  fill: #203a43; /* Add this line */
+}
+
+
+
