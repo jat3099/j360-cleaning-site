@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Cleaning Service</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -38,6 +36,10 @@
                     </div>
                     <span class="logo-text">J360 Cleaning Services</span>
                 </div>
+
+                <!-- ✅ HAMBURGER BUTTON FOR MOBILE NAVIGATION -->
+                <div class="hamburger">☰</div>
+
                 <div class="navdiv">
                     <ul>
                         <li><a href="index.html#home">Home</a></li>
@@ -51,6 +53,7 @@
             </div>
         </nav>
     </header>
+
 
     <!-- Hero Section -->
     <!-- Hero Section -->
@@ -207,7 +210,28 @@
             <a href="https://m.youtube.com/channel/UCqSFzL0_RtK0myPQsULzz6g" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
     </footer>
+
+    <!-- Optional other scripts above here -->
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navbar = document.querySelector(".navdiv");
+
+        hamburger.addEventListener("click", () => {
+            navbar.classList.toggle("open");
+        });
+
+        // Close menu on link click
+        document.querySelectorAll(".navdiv ul li a").forEach(link => {
+            link.addEventListener("click", () => {
+            navbar.classList.remove("open");
+            });
+        });
+    </script>
+
+
 </body>
+
+
 <script>
     window.addEventListener("scroll", function () {
         const header = document.querySelector("header");
@@ -228,7 +252,4 @@
         }
     });
 </script>
-
-
-
 </html>

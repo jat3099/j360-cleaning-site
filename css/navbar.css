@@ -100,6 +100,15 @@ header.shrink,
     object-position: 50% 55% !important;
 }
 
+/* Add this right before your @media (max-width: 768px) block */
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .navbar-inner {
     flex-direction: column;
@@ -126,4 +135,25 @@ header.shrink,
   .logo-text {
     font-size: 1.3rem;
   }
+
+  /* 🍔 Hamburger visibility for mobile */
+  .hamburger {
+    display: block;
+  }
+
+  /* 🔽 Hide/show mobile nav */
+  .navdiv {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-dark);
+  }
+
+  .navdiv.open {
+    display: flex;
+  }
 }
+
