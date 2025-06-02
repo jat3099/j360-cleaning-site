@@ -98,3 +98,31 @@ header.shrink,
     height: 70px !important;
     object-position: 50% 55% !important;
 }
+
+@media (max-width: 768px) {
+  .navbar-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .navdiv ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .logo-img-wrapper,
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+  }
+}
