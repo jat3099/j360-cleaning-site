@@ -85,7 +85,7 @@
     margin-bottom: 15px;
   }
 
-.bar-with-text {
+  .bar-with-text {
     position: relative;
     text-align: center;
     margin: 100px auto 80px;
@@ -96,28 +96,38 @@
   }
   
   .bar-with-text::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 100px; /* Bar thickness */
-    width: 100%;
-    background-color: #2c3e50; /* Solid purple — change as needed */
-    border-radius: 4px;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 100px; /* Bar thickness */
+  width: 100%;
+  background: linear-gradient(90deg, #0a402a, #009e47); /* ✅ Replaced dark blue with logo-green gradient */
+  border-radius: 4px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
   
   .bar-title {
-    position: relative;
-    display: inline-block;
-    background-color: transparent; /* Cutout behind the text */
-    padding: 0 20px;
-    font-size: 2rem;
-    color: white;
-    font-weight: 700;
-    z-index: 2;
-  }
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  padding: 0 20px;
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.bar-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--aqua-bright);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
   
   /* === "Our Services" Shadow Card Section === */
 
@@ -180,10 +190,19 @@
   }
   
   .service-icon {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #2c3e50;
-  }
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--green-primary), var(--aqua-bright));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.service:hover .service-icon {
+  text-shadow: 0 0 10px var(--aqua-bright);
+}
+
+
   
   .service h3 {
     font-size: 1.2rem;

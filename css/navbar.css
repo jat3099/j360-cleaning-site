@@ -1,6 +1,7 @@
 /* navbar.css */
+
 header, .navbar {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background-color: var(--background-dark); /* Optionally replace gradient */
     position: fixed;
     width: 100%;
     top: 0;
@@ -12,32 +13,29 @@ header, .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 60px; /* Add some horizontal spacing */
-  }
-  
+    padding: 10px 60px;
+}
 
-  .navdiv ul {
+.navdiv ul {
     display: flex;
-    gap: 30px; /* ← Unified spacing for ALL pages */
+    gap: 30px;
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
+}
 
 .navdiv ul li a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    font-size: 3.5rem;
+    font-size: 16px;
     font-weight: 500;
     position: relative;
-    font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .navdiv ul li a:hover {
-    color: #007BFF;
+    color: var(--aqua-bright);
 }
 
 .navdiv ul li a::after {
@@ -47,7 +45,7 @@ header, .navbar {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #007BFF;
+    background-color: var(--aqua-bright);
     transition: width 0.3s ease;
 }
 
@@ -78,11 +76,10 @@ header, .navbar {
 }
 
 .logo-text {
-    font-size: 1.5rem;
-    font-family: 'Yeseva One', serif;
     font-size: 2.0rem;
+    font-family: 'Yeseva One', serif;
     font-weight: bold;
-    color: white;
+    color: var(--green-primary);
 }
 
 /* Shrink on scroll */

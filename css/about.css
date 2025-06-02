@@ -1,135 +1,140 @@
 .about-section {
-    background-color: #ffffff;
-    padding: 100px 20px;
-    padding-top: 300px;
-    font-family: 'Josefin Sans', sans-serif;
-  }
+  background: linear-gradient(180deg, #f5fdf9, #e7f8ef); /* soft, light green tones */
+  padding: 80px 20px;
+  text-align: center;
+  margin-top: 100px;
   
-  .about-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  .about-text {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .about-text h2 {
-    font-family: 'Yeseva One', serif;
-    font-size: 3.5rem;
-    color: #2c5364;
-    margin-bottom: 20px;
-  }
-  
-  .about-text p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #595959;
-    margin-bottom: 16px;
-  }
-  
-  .about-buttons {
-    margin-top: 30px;
-  }
-  
-  .about-buttons a {
-    display: inline-block;
-    padding: 14px 26px;
-    font-size: 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-right: 15px;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-primary {
-    background-color: #6DBCBD;
-    color: #fff;
-    border: 1px solid #6DBCBD;
-  }
-  
-  .btn-primary:hover {
-    background-color: #5baaaa;
-  }
-  
-  .btn-secondary {
-    border: 1px solid #6DBCBD;
-    color: #6DBCBD;
-    background-color: transparent;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #6DBCBD;
-    color: white;
-  }
-  
-  .about-image {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-  }
-  
-  .about-image img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
+}
 
-  .how-it-works {
-    background-color: #f7f7f7;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .how-it-works h2 {
-    font-size: 45px;
-    color: #66b6b6;
-    font-family: 'Yeseva One', serif;
-    font-weight: 600; /* or 700 if needed */
-    margin-bottom: 40px;
-    font-weight: bold;
-  }
-  
-  .steps {
-    display: flex;
-    justify-content: center;
-    gap: 100px; 
-    flex-wrap: wrap;
-  }
-  
-  .step {
-    max-width: 300px;
-  }
-  
-  .step i {
-    font-size: 48px;
-    color: #000;
-    margin-bottom: 15px;
-  }
-  
-  .step h3 {
-    font-size: 30px;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #66b6b6;
-    margin-bottom: 10px;
-  }
-  
-  .step p {
-    color: #333;
-    font-size: 16px;
-  }
+/* Add this for gradient icon */
+.about-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--green-primary), var(--aqua-bright));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
 
- 
-  
 
-  
-  
-  
-  
-  
+/* Updated heading */
+.about-text h2 {
+  font-family: 'Yeseva One', serif;
+  font-size: 3rem;
+  color: var(--green-primary); /* Brand color */
+  margin-bottom: 20px;
+}
+
+/* Refined paragraph */
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 300px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-buttons {
+  margin-top: 30px;
+}
+
+.about-buttons a {
+  display: inline-block;
+  padding: 14px 26px;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Button styles updated for brand tone */
+.btn-primary {
+  background-color: var(--green-primary);
+  color: var(--white);
+  border: 1px solid var(--green-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--green-dark);
+}
+
+.btn-secondary {
+  border: 1px solid var(--green-primary);
+  color: var(--green-primary);
+  background-color: transparent;
+}
+
+.btn-secondary:hover {
+  background-color: var(--green-primary);
+  color: white;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.03);
+}
+
+/* --- How it Works section (unchanged except brand colors) --- */
+.how-it-works {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 45px;
+  color: var(--green-primary);
+  font-family: 'Yeseva One', serif;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.step {
+  max-width: 300px;
+}
+
+.step i {
+  font-size: 48px;
+  color: var(--green-primary);
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  font-s

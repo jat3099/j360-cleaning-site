@@ -1,80 +1,58 @@
-/* footer.css */
+/* === TOP FOOTER SECTION === */
+.site-footer {
+  background: linear-gradient(to right, #0e3a2f, #064637); /* Brand-aligned green gradient */
+  color: white;
+  padding: 60px 20px;
+}
 
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-  }
-  
-  .footer-icons a {
-    color: white;
-    margin: 0 0.5rem;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-icons a:hover {
-    color: #9f79ff;
-  }
-  
-  /* ✅ Main footer styling */
-  .site-footer {
-    background-color:#2c5364;
-    padding: 60px 20px;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .footer-column {
-    flex: 1;
-    min-width: 250px;
-    margin: 10px;
-    margin-right: 80px;
-  }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .footer-navbar {
-    text-align: right; 
-  }
-  
-  .footer-column h3 {
-    font-family: 'Yeseva One', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  
-  .footer-column p,
-  .footer-column a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.95rem;
-    line-height: 1.8;
-  }
-  
-  .footer-column a:hover {
-    text-decoration: underline;
-  }
-  .footer-navbar a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-navbar a:hover {
-    color: #007BFF; /* match top navbar hover color */
-  }
-  
-  
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.5rem;
+  color: var(--aqua-bright); /* or #1BE3D6 */
+  margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column a {
+  color: #e0f5f0;
+  font-size: 0.95rem;
+  margin: 8px 0;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: var(--aqua-bright);
+}
+
+/* === BOTTOM BAR === */
+.modern-footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.85rem;
+}
+
+.footer-icons a {
+  color: #ccc;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: var(--aqua-bright);
+}
