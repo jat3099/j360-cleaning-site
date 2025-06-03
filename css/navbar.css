@@ -118,6 +118,14 @@ header.shrink,
     background-color: var(--background-dark);
   }
 
+  .logo-img-wrapper {
+    overflow: visible;
+  }
+
+  .logo-img {
+    object-position: center;
+  }
+
   .logo {
     margin-bottom: 10px;
   }
