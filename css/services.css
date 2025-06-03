@@ -57,12 +57,15 @@
   border-radius: 5px;
   text-decoration: none;
   align-self: start;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+/* ✅ Hover Effect - Light green on hover */
+.service-card .btn:hover {
+  background-color: var(--aqua-bright);
+  color: white;
 }
+
 
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
@@ -82,3 +85,6 @@
     max-height: 200px;
   }
 }
+
+
+
