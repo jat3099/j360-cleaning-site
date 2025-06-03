@@ -137,4 +137,13 @@
 }
 
 .step h3 {
-  font-s
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
