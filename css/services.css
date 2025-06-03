@@ -9,18 +9,20 @@
 }
 
 .service-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 460px;
-    height: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #fff;
-    text-align: left;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+
+  width: 100%;
+  max-width: 320px;  /* 👈 smaller size */
+}
+
   
 
 .service-card ul {
