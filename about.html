@@ -18,21 +18,24 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/faq.css">
   <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/colors.css">
 </head>
 <body>
 
-  <!-- If you have a reusable navbar, add it here -->
+  <!-- Navigation Bar -->
   <header>
     <nav class="navbar">
       <div class="navbar-inner">
         <div class="logo">
           <div class="logo-img-wrapper">
-            <img src="images/J 360 cleaning card.png" alt="Logo" class="logo-img">
+            <img src="images/J_360_cleaning_card.png" alt="Logo" class="logo-img">
           </div>
           <span class="logo-text">J360 Cleaning Services</span>
         </div>
+
+        <!-- 🍔 HAMBURGER BUTTON FOR MOBILE -->
+        <div class="hamburger">☰</div>
+
         <div class="navdiv">
           <ul>
             <li><a href="index.html#home">Home</a></li>
@@ -47,6 +50,7 @@
     </nav>
   </header>
 
+  <!-- About Section -->
   <section class="about-section">
     <div class="about-container">
       <div class="about-text">
@@ -56,7 +60,7 @@
         <p>That’s why we developed the company – to help you or your business grow.</p>
 
         <div class="about-buttons">
-          <a href="index.html#contact"class="btn-primary">Contact Us</a>
+          <a href="index.html#contact" class="btn-primary">Contact Us</a>
           <a href="services.html" class="btn-secondary">See Services</a>
         </div>
       </div>
@@ -88,6 +92,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <section class="site-footer">
     <div class="footer-container">
       <div class="footer-column">
@@ -99,18 +104,15 @@
         <p><i class="fas fa-envelope"></i> coreas@j360cleaning.com</p>
       </div>
       <div class="footer-column footer-navbar">
-          <p><a href="index.html#home">Home</a></p>
-          <p><a href="about.html">About</a></p>
-          <p><a href="services.html">Services</a></p>
-          <p><a href="index.html#contact">Contact</a></p>
-          <p><a href="services.html">Gallery</a></p>
+        <p><a href="index.html#home">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="services.html">Services</a></p>
+        <p><a href="index.html#contact">Contact</a></p>
+        <p><a href="services.html">Gallery</a></p>
       </div>
     </div>
   </section>
-  
 
-  <!-- Optionally add your footer here -->
-  <!-- Footer -->
   <footer class="modern-footer">
     <p>&copy; 2025 Cleaning Pros. All rights reserved.</p>
     <div class="footer-icons">
@@ -118,7 +120,23 @@
         <a href="#"><i class="fa-solid fa-envelope"></i></a>
         <a href="https://www.facebook.com/share/1CN5TPJGwr/"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://m.youtube.com/channel/UCqSFzL0_RtK0myPQsULzz6g" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
-      </div>
-</footer>
+    </div>
+  </footer>
+
+  <!-- Hamburger Toggle Script -->
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navdiv = document.querySelector(".navdiv");
+
+    hamburger.addEventListener("click", () => {
+      navdiv.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".navdiv a").forEach(link => {
+      link.addEventListener("click", () => {
+        navdiv.classList.remove("open");
+      });
+    });
+  </script>
 </body>
 </html>

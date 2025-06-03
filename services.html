@@ -32,6 +32,7 @@
           </div>
           <span class="logo-text">J360 Cleaning Services</span>
         </div>
+        <div class="hamburger">☰</div> <!-- Hamburger added here -->
         <div class="navdiv">
           <ul>
             <li><a href="index.html#home">Home</a></li>
@@ -266,6 +267,20 @@
     </div>
   </footer>
   
+  <script>
+  const hamburger = document.querySelector(".hamburger");
+  const navdiv = document.querySelector(".navdiv");
+
+  hamburger.addEventListener("click", () => {
+    navdiv.classList.toggle("open");
+  });
+
+  document.querySelectorAll(".navdiv a").forEach(link => {
+    link.addEventListener("click", () => {
+      navdiv.classList.remove("open");
+    });
+  });
+</script>
 
 </body>
 
