@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 460px;
+    width: 360px;
     height: 100%;
     padding: 20px;
     border-radius: 10px;
@@ -42,7 +42,12 @@
     text-align: center;
   }
   
-  
+  .service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
 
 .service-box:hover,
 .service-card:hover {
@@ -225,4 +230,23 @@
     margin: 60px auto 40px;
     max-width: 800px;
   }
+
+  @media (max-width: 768px) {
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 90vw; /* ✅ Makes sure it fits screen */
+  }
+
+  .service-card img {
+    height: auto;
+    max-height: 200px; /* Optional, to avoid huge images */
+  }
+}
+
   
