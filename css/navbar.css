@@ -1,29 +1,57 @@
-/* navbar.css */
-
-header, .navbar {
+header,
+.navbar {
   background-color: var(--background-dark);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  padding: 1rem 0;
-  display: flex;
 }
 
 .navbar-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* <--- LEFT + RIGHT Layout */
   align-items: center;
-  padding: 10px 60px;
+  max-width: 1200px;
+  margin: 0 auto; /* <--- Center the navbar block */
+  padding: 1rem 2rem;
 }
 
+/* Logo Group */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img-wrapper {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.logo-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-family: 'Yeseva One', serif;
+  font-weight: bold;
+  color: var(--green-primary);
+}
+
+/* Navigation Menu */
 .navdiv ul {
   display: flex;
   gap: 30px;
-  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .navdiv ul li a {
@@ -54,36 +82,16 @@ header, .navbar {
   width: 100%;
 }
 
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-left: -40px;
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
 }
 
-.logo-img-wrapper {
-  width: 80px;
-  height: 80px;
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-.logo-img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  object-position: 50% 60%;
-}
-
-.logo-text {
-  font-size: 2.0rem;
-  font-family: 'Yeseva One', serif;
-  font-weight: bold;
-  color: var(--green-primary);
-}
-
-/* Shrink on scroll */
+/* Shrink Effect */
 header.shrink,
 .navbar.shrink {
   padding: 4px 0;
@@ -100,34 +108,12 @@ header.shrink,
   object-position: 50% 55% !important;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-}
-
-/* Responsive Navigation */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar-inner {
     flex-direction: column;
     align-items: center;
     padding: 10px 20px;
-    background-color: var(--background-dark);
-  }
-
-  .logo-img-wrapper {
-    overflow: visible;
-  }
-
-  .logo-img {
-    object-position: center;
-  }
-
-  .logo {
-    margin-bottom: 10px;
   }
 
   .hamburger {
@@ -137,12 +123,8 @@ header.shrink,
   .navdiv {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
     background-color: var(--background-dark);
-    transition: all 0.3s ease;
   }
 
   .navdiv.open {
@@ -153,10 +135,5 @@ header.shrink,
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0;
-  }
-
-  /* Prevent scroll when menu is open */
-  body.nav-open {
-    overflow: hidden;
   }
 }
