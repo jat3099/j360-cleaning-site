@@ -1,264 +1,84 @@
-  /* services.css */
-  .service-box {
-    width: 300px; /* Wider boxes */
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .service-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 360px;
-    height: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #fff;
-    text-align: left;
-  }
-  
-
-  .service-card ul {
-    list-style: disc;
-    padding-left: 20px;
-    text-align: left;
-    margin: 10px 0 20px 0;
-  }
-  
-  .service-card li {
-    margin-bottom: 6px;
-    line-height: 1.4;
-  }
-
-  .service-card .btn {
-    margin-top: auto;
-    margin-bottom: 20px; /* optional space from the bottom */
-    align-self: center; /* center the button horizontally */
-    text-align: center;
-  }
-  
-  .service-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-
-  .service-box:hover,
-  .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
-  }
-
-  .service-box img,
-  .service-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-
-  .services-header {
-    margin-top: 150px; /* 👈 this adds space above the heading */
-    text-align: center;
-    
-  }
-
-
-  .services-intro {
-    margin-bottom: 100px; /* 👈 Add spacing underneath the text */
-    font-weight: 500;
-    color: #333;
-    text-align: center;
-  }
-  .services-categories {
-    margin-bottom: 60px;
-    text-align: center;
-    font-size: 1rem;
-    color: #444;
-  }
-  .services-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-    margin-bottom: 15px;
-  }
-
-  .bar-with-text {
-    position: relative;
-    text-align: center;
-    margin: 100px auto 80px;
-    height: 20px;
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 120px;
-  }
-  
-  .bar-with-text::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  height: 100px; /* Bar thickness */
-  width: 100%;
-  background: linear-gradient(90deg, #0a402a, #009e47); /* ✅ Replaced dark blue with logo-green gradient */
-  border-radius: 4px;
-  transform: translateY(-50%);
-  z-index: 1;
-  }
-  
-  .bar-title {
-  position: relative;
-  display: inline-block;
-  background-color: transparent;
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 40px auto;
   padding: 0 20px;
-  font-size: 2rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-card ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.service-card ul li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.service-card .btn {
+  display: inline-block;
+  background-color: var(--green-primary);
   color: white;
-  font-weight: 700;
-  z-index: 2;
-  }
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  align-self: start;
+}
 
-  .bar-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: var(--aqua-bright);
-    margin: 12px auto 0;
-    border-radius: 2px;
-  }
-  
-  /* === "Our Services" Shadow Card Section === */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
 
-  .services-list {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;  /* 🟢 makes children match height */
-    gap: 30px;
-    flex-wrap: nowrap;
-    margin-top: 40px;
-  }
-  
-  
-  .service {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 30px 20px;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-bottom: 60px; 
-    max-width: 280px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  body {
-    font-family: 'Poppins', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-
-
-  .services-header h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 10px;
-    letter-spacing: -0.5px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  }
-  
-  .services-categories p {
-    font-size: 1.1rem;
-    color: #444;
-    font-weight: 400;
-    line-height: 1.6;
-  }
-  
-  .service:hover .service-icon {
-  text-shadow: 0 0 10px var(--aqua-bright);
-  color: var(--aqua-bright);}
-  
-  .service:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-  }
-  
-  .service-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    background: linear-gradient(135deg, var(--green-primary), var(--aqua-bright));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-  } 
-
-
-
-  
-  .service h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
-  
-  .service p {
-    font-size: 0.95rem;
-    color: #555;
-  }
-  
-  .services-header-box {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin-top: 100px; /* push it down from previous section */
-    padding: 30px 40px;
-    text-align: center;
-    margin: 60px auto 40px;
-    max-width: 800px;
-  }
-
-  @media (max-width: 768px) {
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
   .service-grid {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
     padding: 0 10px;
   }
 
-  .service-card {
-    width: 100%;
-    max-width: 90vw; /* ✅ Makes sure it fits screen */
-  }
-
   .service-card img {
     height: auto;
-    max-height: 200px; /* Optional, to avoid huge images */
+    max-height: 200px;
   }
-  .service-box {
-    width: 100%;
-    max-width: 90vw; /* ✅ Makes sure it fits screen */
-  }
-  .service-box img {
-    height: auto;
-    max-height: 200px; /* Optional, to avoid huge images */
-  }
-  .services-header h1 {
-    font-size: 2.5rem;
-  }
-  }
-
-  
+}
