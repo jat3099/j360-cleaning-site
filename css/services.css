@@ -215,6 +215,18 @@ body {
     max-width: 800px;
 }
 
+@media (max-width: 768px) {
+  .services-header-box {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .services-list {
+    padding: 0 10px;
+  }
+}
+
+
 /* ✅ Add this to control responsive behavior for service-grid */
 .service-grid {
     display: grid;
