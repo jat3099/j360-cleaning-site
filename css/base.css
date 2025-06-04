@@ -1,4 +1,10 @@
 /* base.css */
+/* Prevent unwanted horizontal scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;

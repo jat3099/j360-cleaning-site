@@ -220,12 +220,23 @@ body {
     }
 
     .service-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important; /* Fix: force single column layout */
         padding: 0 10px;
     }
 
     .service-card {
         width: 100%;
+    }
+
+    .services-preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%;
+        max-width: 320px;
     }
 }
 
