@@ -62,3 +62,14 @@
   background: var(--green-primary);
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    padding: 0 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+

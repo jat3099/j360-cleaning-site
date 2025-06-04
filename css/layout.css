@@ -1,4 +1,10 @@
 /* layout.css */
+/* Prevent unwanted horizontal scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .services-list,
 .service-grid,
 .navbar-inner {
