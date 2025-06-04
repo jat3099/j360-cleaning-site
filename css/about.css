@@ -147,3 +147,27 @@
   color: #555;
   line-height: 1.6;
 }
+
+* {
+  outline: 1px solid red;
+}
+.about-section {
+  padding: 80px 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Fix horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px; /* MUCH smaller on mobile */
+    padding: 0 20px;
+  }
+}
