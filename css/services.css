@@ -1,6 +1,7 @@
-/* services.css */
+/* ✅ Base Responsive Layout for Services Page */
+
 .service-box {
-    width: 300px; /* Wider boxes */
+    width: 300px;
     padding: 25px;
     border-radius: 10px;
     text-align: center;
@@ -19,7 +20,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
     width: 100%;
-    max-width: 320px;  /* 👈 smaller size */
+    max-width: 320px;
 }
 
 .service-card ul {
@@ -126,7 +127,7 @@
     border-radius: 2px;
 }
 
-/* === "Our Services" Shadow Card Section === */
+/* === Service List Section === */
 .services-list {
     display: flex;
     justify-content: center;
@@ -204,6 +205,30 @@ body {
     color: #555;
 }
 
+/* ✅ Responsive Fixes for Mobile */
+@media (max-width: 768px) {
+    .services-header-box {
+        max-width: 320px;
+        margin: 0 auto 30px;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .services-list {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+}
+
 .services-header-box {
     background-color: #ffffff;
     border-radius: 12px;
@@ -215,20 +240,7 @@ body {
     max-width: 800px;
 }
 
-@media (max-width: 768px) {
-  .services-header-box {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .services-list {
-    padding: 0 20px;
-  }
-}
-
-
-
-/* ✅ Add this to control responsive behavior for service-grid */
+/* ✅ Service Grid */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -241,16 +253,5 @@ body {
 @media (max-width: 1024px) {
     .service-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .service-grid {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
-    }
-
-    .service-card {
-        width: 100%;
     }
 }
