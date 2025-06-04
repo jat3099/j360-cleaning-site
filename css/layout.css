@@ -94,6 +94,27 @@
   padding: 0 20px;
 }
 
+/* Force full-width for the header box on small screens */
+@media (max-width: 768px) {
+  .services-header-box {
+    margin: 0 auto 40px auto;
+    padding: 25px 20px;
+    max-width: 90%;
+    box-sizing: border-box;
+  }
+
+  .services-list {
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
 
 
 
